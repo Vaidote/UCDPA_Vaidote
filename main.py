@@ -99,7 +99,7 @@ print(TopSales)
 TopSales.to_csv("Top_Sales", index=False)
 
 # Visualise results
-sns.countplot(data=total_sales, x='Year')
+sns.countplot(data=total_sales, x='Year', palette=['#432371', '#FAAE7B'])
 
 time_period = total_sales['Year'].nunique()
 data = total_sales.groupby('Year').size().values
