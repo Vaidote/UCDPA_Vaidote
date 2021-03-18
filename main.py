@@ -98,7 +98,7 @@ print(TopSales)
 # Save dataframe in single csv file
 TopSales.to_csv("Top_Sales", index=False)
 
-# Visualise results
+# Visualise total sales by year
 sns.countplot(data=total_sales, x='Year', palette=['#432371', '#FAAE7B'])
 
 time_period = total_sales['Year'].nunique()
