@@ -4,7 +4,6 @@ pd.pandas.set_option('display.max_columns', 20)
 pd.pandas.set_option('display.max.rows', 50)
 import numpy as np
 import matplotlib.pyplot as plt
-import plotly.express as px
 import seaborn as sns
 sns.set_style("darkgrid")
 import os
