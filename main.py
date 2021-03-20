@@ -4,6 +4,7 @@ pd.pandas.set_option('display.max_columns', 20)
 pd.pandas.set_option('display.max.rows', 50)
 import numpy as np
 import matplotlib.pyplot as plt
+from wordcloud import WordCloud
 import seaborn as sns
 sns.set_style("darkgrid")
 import os
@@ -196,7 +197,17 @@ plt.title("Video game genres by publisher in Top 500 list")
 plt.grid(True)
 plt.show()
 
-
-
+# Create a word cloud image
+text = ("Nintendo WiiSport SuperMarioBros MarioKartWii WiiSportsResort Pokemon"
+        " Red PokemonBlue Tetris WiiPlay WiiFit WiiFitPlus KinectAdventures GrandTheft"
+        " Sports Racing Puzzle Shooter Action Adventure Strategy RolePlaying"
+        " DisneyInteractiveStudios MTV_Games FoxInteractive HasbroInteractive 505Games Sega"
+        " ElectronicArts Ubisoft Activision MicrosoftGameStudios SonyComputerEntertainment"
+        "DS PS2 PS3 Wii X360 PSP PS PC")
+wordcloud = WordCloud(width=900, height=600, margin=0).generate(text)
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.margins(x=0, y=0)
+plt.show()
 
 
