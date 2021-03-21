@@ -188,7 +188,7 @@ plt.title("Top 10 Publishers in the world", fontsize=15)
 plt.xlabel('Number of games')
 plt.show()
 
-# Top ten sales by platform
+# Top500 sales by publisher and genre
 top500 = total_sales.head(500)
 x = np.array(top500["Genre"])
 y = np.array(top500['Publisher'])
